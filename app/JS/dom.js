@@ -1,0 +1,3 @@
+DOMSelectors = [asdafjajojkgfgjio];
+
+export { DOMSelectors };
