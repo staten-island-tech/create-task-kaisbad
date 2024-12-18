@@ -1,3 +1,4 @@
+@import "variables.css";
 body,
 * {
   margin: 0;
@@ -16,8 +17,8 @@ body,
 }
 
 .card {
-  width: 17%;
-  min-height: 25rem;
+  width: 33%;
+  min-height: 40rem;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
@@ -28,9 +29,13 @@ body,
   border-radius: 2rem;
 }
 
-.card-img {
+.firstimg {
   height: 75%;
   width: auto;
   max-width: 75%;
   object-fit: cover;
+}
+
+.btn {
+  font-size: 5rem;
 }

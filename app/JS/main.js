@@ -1,14 +1,14 @@
 import "../CSS/style.css";
 import { DOMSelectors } from "../JS/dom.js";
+import { lcfb, coinFlip } from "../JS/options.js";
 
-const rockPaperScissors = ["Rock", "Paper", "Scissors"];
-const coinFlip = ["Heads", "Tails"];
+console.log(lcfb, coinFlip);
 
 function playGameCard() {
   clearCards();
   DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
-    `<div class="card" 
+    `<div class="container" 
       </div>
 }`
   );

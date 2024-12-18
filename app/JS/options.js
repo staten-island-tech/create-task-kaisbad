@@ -1,6 +1,4 @@
-const rockPaperScissors = ["Rock", "Paper", "Scissors"];
-
-const operators = [
+const lcfb = [
   {
     name: "Lion",
     beat: "Chicken",
@@ -40,3 +38,5 @@ const coinFlip = [
     image: "",
   },
 ];
+
+export { lcfb, coinFlip };
