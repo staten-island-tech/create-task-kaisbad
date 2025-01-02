@@ -6,10 +6,13 @@ console.log(lcfb, coinFlip);
 
 function playGameCard() {
   clearCards();
-  DOMSelectors.container.insertAdjacentHTML(
+  DOMSelectors.playcontainer.insertAdjacentHTML(
     "beforeend",
-    `<div class="container" 
-      </div>
+    `<div class="card"><h2 class="header">${lfcb.name}</h2>
+    <ul><li>${lfcb.beat}</li>
+    <li>${lfcb.lose}</li>
+    <li>${lfcb.tie}</li></ul>
+    <img src="${lfcb.image}" alt="operator" class="card-img"></div>
 }`
   );
 }
@@ -18,7 +21,9 @@ function clearCards() {
   DOMSelectors.container.innerHTML = "";
 }
 
-function insertCard(characters) {
+/* function insertCard(characters) {
   clearCards();
   characters.forEach((character) => {});
-}
+} */
+
+playGameCard();

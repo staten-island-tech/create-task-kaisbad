@@ -29,7 +29,22 @@ body,
   border-radius: 2rem;
 }
 
+.playcontainer {
+  display: flex;
+  width: 96%;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .firstimg {
+  height: 75%;
+  width: auto;
+  max-width: 75%;
+  object-fit: cover;
+}
+.card-img {
   height: 75%;
   width: auto;
   max-width: 75%;

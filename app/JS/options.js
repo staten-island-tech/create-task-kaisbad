@@ -4,28 +4,28 @@ const lcfb = [
     beat: "Chicken",
     lose: "Attacker",
     tie: "Fly",
-    image: "",
+    image: "/lion.jpg",
   },
   {
     name: "Chicken",
     beat: "Fly",
     lose: "Lion",
     tie: "Bone",
-    image: "",
+    image: "/chicken.jpg",
   },
   {
     name: "Fly",
     beat: "Bone",
     lose: "Chicken",
     tie: "Lion",
-    image: "",
+    image: "/fly.jpg",
   },
   {
     name: "Bone",
     beat: "Lion",
     lose: "Fly",
     tie: "Chicken",
-    image: "",
+    image: "/Bone.jpg",
   },
 ];
 const coinFlip = [
