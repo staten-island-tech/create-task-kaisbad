@@ -5,7 +5,7 @@ import { lcfb, coinFlip } from "../JS/options.js";
 console.log(lcfb, coinFlip);
 
 function playGameCard() {
-  clearCards();
+  //clearCards();
   DOMSelectors.playcontainer.insertAdjacentHTML(
     "beforeend",
     `<div class="card"><h2 class="header">${lfcb.name}</h2>
@@ -27,3 +27,7 @@ function clearCards() {
 } */
 
 playGameCard();
+
+DOMSelectors.btn.addEventListener("click", () => {
+  clearCards();
+});

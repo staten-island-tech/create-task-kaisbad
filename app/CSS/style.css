@@ -24,7 +24,6 @@ body,
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 3%;
   box-shadow: 9px 8px black;
   border-radius: 2rem;
 }
@@ -41,8 +40,9 @@ body,
 .firstimg {
   height: 75%;
   width: auto;
-  max-width: 75%;
+  max-width: 80%;
   object-fit: cover;
+  margin: 3%;
 }
 .card-img {
   height: 75%;
@@ -52,5 +52,9 @@ body,
 }
 
 .btn {
-  font-size: 5rem;
+  font-size: 4rem;
+  margin-bottom: 3%;
+}
+h1 {
+  font-size: 4rem;
 }
