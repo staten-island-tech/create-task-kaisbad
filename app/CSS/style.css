@@ -16,8 +16,17 @@ body,
   justify-content: space-around;
 }
 
+.playcontainer {
+  display: flex;
+  width: 96%;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .card {
-  width: 33%;
+  width: 46%;
   min-height: 40rem;
   border: 2px solid black;
   display: flex;
@@ -28,13 +37,17 @@ body,
   border-radius: 2rem;
 }
 
-.playcontainer {
+.playcard {
+  width: 46%;
+  min-height: 40rem;
+  border: 2px solid black;
   display: flex;
-  width: 96%;
-  margin: 2rem auto;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 9px 8px black;
+  border-radius: 2rem;
+  margin-bottom: 3%;
 }
 
 .firstimg {
@@ -45,10 +58,16 @@ body,
   margin: 3%;
 }
 .card-img {
-  height: 75%;
+  height: 80%;
   width: auto;
-  max-width: 75%;
+  max-width: 90%;
   object-fit: cover;
+  margin-bottom: 2%;
+}
+
+.cardbtn {
+  font-size: 2rem;
+  margin-bottom: 2%;
 }
 
 .btn {
@@ -57,4 +76,7 @@ body,
 }
 h1 {
   font-size: 4rem;
+}
+li {
+  font-size: 1.75rem;
 }

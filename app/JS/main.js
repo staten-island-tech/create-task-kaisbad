@@ -5,15 +5,19 @@ import { lcfb, coinFlip } from "../JS/options.js";
 console.log(lcfb, coinFlip);
 
 function playGameCard() {
-  //clearCards();
-  DOMSelectors.playcontainer.insertAdjacentHTML(
-    "beforeend",
-    `<div class="card"><h2 class="header">${lfcb.name}</h2>
-    <ul><li>${lfcb.beat}</li>
-    <li>${lfcb.lose}</li>
-    <li>${lfcb.tie}</li></ul>
-    <img src="${lfcb.image}" alt="operator" class="card-img"></div>
-}`
+  clearCards();
+  lcfb.forEach((option) =>
+    DOMSelectors.playcontainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="playcard"><h1 class="header">${option.name}</h1>
+  <ul><li>${option.beat}</li>
+  <li>${option.lose}</li>
+  <li>${option.tie}</li></ul>
+  <img src="${option.image}" alt="operator" class="card-img">
+  <button class=cardbtn>Choose</button></div>
+  
+`
+    )
   );
 }
 
@@ -26,8 +30,10 @@ function clearCards() {
   characters.forEach((character) => {});
 } */
 
-playGameCard();
-
-DOMSelectors.btn.addEventListener("click", () => {
-  clearCards();
+DOMSelectors.container.addEventListener("click", function (event) {
+  playGameCard();
 });
+
+//make font variables
+//make themes
+//separate home buttons
