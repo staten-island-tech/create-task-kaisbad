@@ -70,7 +70,9 @@ body,
   margin-bottom: 2%;
 }
 
-.btn {
+.btn,
+.rpsbtn,
+.cfbtn {
   font-size: 4rem;
   margin-bottom: 3%;
 }

@@ -4,6 +4,8 @@ const DOMSelectors = {
   button: document.querySelector(".btn"),
   warm: document.getElementById("warm"),
   cool: document.getElementById("cool"),
+  rpsbtn: document.querySelector(".rpsbtn"),
+  cfbtn: document.querySelector(".cfbtn"),
 };
 
 export { DOMSelectors };
