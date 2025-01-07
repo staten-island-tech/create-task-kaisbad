@@ -7,7 +7,7 @@ console.log(lcfb, coinFlip);
 function playGameCard() {
   clearCards();
   lcfb.forEach((option) =>
-    DOMSelectors.playcontainer.insertAdjacentHTML(
+    DOMSelectors.rpscontainer.insertAdjacentHTML(
       "beforeend",
       `<div class="playcard"><h1 class="header">${option.name}</h1>
   <ul><li>${option.beat}</li>
@@ -24,7 +24,7 @@ function playGameCard() {
 function headTailsGameCard() {
   clearCards();
   coinFlip.forEach((option) =>
-    DOMSelectors.playcontainer.insertAdjacentHTML(
+    DOMSelectors.cfcontainer.insertAdjacentHTML(
       "beforeend",
       `<div class="playcard"><h1 class="header">${option.name}</h1>
   <img src="${option.image}" alt="img" class="card-img">
@@ -52,9 +52,16 @@ DOMSelectors.cfbtn.addEventListener("click", function (event) {
   headTailsGameCard();
 });
 
-DOMSelectors.playcontainer.addEventListener("click", function (event) {
+DOMSelectors.cfcontainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("cardbtn")) {
-    lcfb, coinFlip.forEach((option) => console.log(option.id));
+    let identifier = event.target.getAttribute("id");
+    console.log(identifier);
+  }
+});
+
+DOMSelectors.rpscontainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("cardbtn")) {
+    lcfb.forEach((option) => console.log(option.id));
   }
 });
 //make font variables

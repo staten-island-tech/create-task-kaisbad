@@ -6,6 +6,8 @@ const DOMSelectors = {
   cool: document.getElementById("cool"),
   rpsbtn: document.querySelector(".rpsbtn"),
   cfbtn: document.querySelector(".cfbtn"),
+  rpscontainer: document.querySelector(".rpscontainer"),
+  cfcontainer: document.querySelector(".cfcontainer"),
 };
 
 export { DOMSelectors };
