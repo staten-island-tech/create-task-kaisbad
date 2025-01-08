@@ -14,7 +14,7 @@ function playGameCard() {
   <li>${option.lose}</li>
   <li>${option.tie}</li></ul>
   <img src="${option.image}" alt="img" class="card-img">
-  <button class=cardbtn>Choose</button></div>
+  <button class="cardbtn" data-id=${option.id}>Choose</button></div>
   
 `
     )
@@ -28,7 +28,7 @@ function headTailsGameCard() {
       "beforeend",
       `<div class="playcard"><h1 class="header">${option.name}</h1>
   <img src="${option.image}" alt="img" class="card-img">
-  <button class=cardbtn>Choose</button></div>
+  <button class="cardbtn" data-id=${option.id}>Choose</button></div>
   
 `
     )
@@ -38,11 +38,6 @@ function headTailsGameCard() {
 function clearCards() {
   DOMSelectors.container.innerHTML = "";
 }
-
-/* function insertCard(characters) {
-  clearCards();
-  characters.forEach((character) => {});
-} */
 
 DOMSelectors.rpsbtn.addEventListener("click", function (event) {
   playGameCard();
@@ -54,17 +49,23 @@ DOMSelectors.cfbtn.addEventListener("click", function (event) {
 
 DOMSelectors.cfcontainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("cardbtn")) {
-    let identifier = event.target.getAttribute("id");
+    let identifier = event.target.getAttribute("data-id");
     console.log(identifier);
   }
 });
 
 DOMSelectors.rpscontainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("cardbtn")) {
-    lcfb.forEach((option) => console.log(option.id));
+    let identifier = event.target.getAttribute("data-id");
+    console.log(identifier);
   }
 });
+
+function rpsGame() {
+  let CPUChoice = Math.floor(Math.random() * 4);
+  for 
+}
+
 //make font variables
 //make themes
 //separate home buttons
-//line 51 prints all the ids of coinflip

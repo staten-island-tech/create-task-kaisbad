@@ -4,7 +4,7 @@ const lcfb = [
     beat: "Beats Chicken",
     lose: "Loses to Bone",
     tie: "Ties with Fly",
-    id: 1,
+    id: 0,
     image: "/lion.jpg",
   },
   {
@@ -12,7 +12,7 @@ const lcfb = [
     beat: "Beats Fly",
     lose: "Loses to Lion",
     tie: "Ties with Bone",
-    id: 2,
+    id: 1,
     image: "/chicken.jpg",
   },
   {
@@ -20,7 +20,7 @@ const lcfb = [
     beat: "Beats Bone",
     lose: "Loses to Chicken",
     tie: "Ties with Lion",
-    id: 3,
+    id: 2,
     image: "/fly.jpg",
   },
   {
@@ -28,19 +28,19 @@ const lcfb = [
     beat: "Beats Lion",
     lose: "Loses to Fly",
     tie: "Ties with Chicken",
-    id: 4,
+    id: 3,
     image: "/bone.jpg",
   },
 ];
 const coinFlip = [
   {
     name: "Heads",
-    id: 1,
+    id: 0,
     image: "/heads.png",
   },
   {
     name: "Tails",
-    id: 2,
+    id: 1,
     image: "/tails.png",
   },
 ];
