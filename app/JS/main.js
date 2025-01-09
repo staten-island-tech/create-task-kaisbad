@@ -62,10 +62,24 @@ DOMSelectors.rpscontainer.addEventListener("click", function (event) {
 });
 
 function rpsGame() {
-  let CPUChoice = Math.floor(Math.random() * 4);
-  for 
+  for (let round = 1; round <= 3; round++) {
+    let random = Math.floor(Math.random() * 4);
+    let CPUChoice;
+    let outcome;
+    if (random === 0) {
+      CPUChoice = "Bone";
+    } else if (random === 1) {
+      CPUChoice = "Lion";
+    } else if (random === 2) {
+      CPUChoice = "Chicken";
+    } else {
+      CPUChoice = "Fly";
+    }
+  }
+  console.log(CPUChoice);
 }
 
+rpsGame();
 //make font variables
 //make themes
 //separate home buttons
