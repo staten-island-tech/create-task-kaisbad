@@ -12,9 +12,7 @@ function playGameCard() {
   <li>${option.lose}</li>
   <li>${option.tie}</li></ul>
   <img src="${option.image}" alt="img" class="card-img">
-  <button class="cardbtn" data-id=${option.id}>Choose</button></div>
-  
-`
+  <button class="cardbtn" data-id=${option.id}>Choose</button></div>`
     )
   );
 }
