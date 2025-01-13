@@ -177,8 +177,6 @@ DOMSelectors.cfbtn.addEventListener("click", function () {
   headTailsGameCard();
 });
 
-//DOMSelectors.returnbtn.addEventListener("click", function () {});
-
 DOMSelectors.cfcontainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("cardbtn")) {
     let playerChoice = event.target.getAttribute("data-id");
