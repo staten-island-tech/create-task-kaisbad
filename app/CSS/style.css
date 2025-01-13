@@ -1,4 +1,3 @@
-@import "variables.css";
 body,
 * {
   margin: 0;
@@ -51,6 +50,19 @@ body,
   margin-bottom: 3%;
 }
 
+.outcomecard {
+  width: 29%;
+  min-height: 33rem;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 9px 8px black;
+  border-radius: 2rem;
+  margin-bottom: 3%;
+}
+
 .firstimg {
   height: 75%;
   width: auto;
@@ -71,14 +83,17 @@ body,
   margin-bottom: 2%;
 }
 
-.btn,
 .rpsbtn,
 .cfbtn {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 3%;
 }
+
 h1 {
   font-size: 4rem;
+}
+h2{
+  font-size: 3rem;
 }
 li {
   font-size: 1.75rem;
