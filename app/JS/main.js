@@ -7,7 +7,7 @@ function playGameCard() {
   lcfb.forEach((option) =>
     DOMSelectors.rpscontainer.insertAdjacentHTML(
       "beforeend",
-      `<div class="playcard"><h1 class="header">${option.name}</h1>
+      `<div class="playcard"><h1>${option.name}</h1>
   <ul><li>${option.beat}</li>
   <li>${option.lose}</li>
   <li>${option.tie}</li></ul>
@@ -21,10 +21,11 @@ function playGameCard() {
 
 function headTailsGameCard() {
   clearCards();
+  clearGameCards();
   coinFlip.forEach((option) =>
     DOMSelectors.cfcontainer.insertAdjacentHTML(
       "beforeend",
-      `<div class="playcard"><h1 class="header">${option.name}</h1>
+      `<div class="playcard"><h1>${option.name}</h1>
       <img src="${option.image}" alt="img" class="card-img">
       <button class="cardbtn" data-id=${option.id}>Choose</button></div>`
     )
@@ -104,14 +105,26 @@ function rpsGame(playerChoice) {
       playerNameChoice = "Bone";
     }
   }
-  clearGameCards();
-  DOMSelectors.rpscontainer.insertAdjacentHTML(
-    "beforeend",
-    `<div class="outcomecard"><h1 class="header">You ${outcome}!</h1>
+  if (outcome == "tie") {
+    clearGameCards();
+    DOMSelectors.rpscontainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="outcomecard"><h1>You ${outcome}!</h1>
       <ul><li>AI Choice: ${CPUChoice}</li>
       <li>Your Choice: ${playerNameChoice}</li></ul>
-      <h2>Refresh to Play Again</h2><div>`
-  );
+      <ul>Would you like to go to Coin Flip to decide a Winner? (If no then refresh)</ul>
+      <button class="cfbtn">Yes</button><div>`
+    );
+  } else {
+    clearGameCards();
+    DOMSelectors.rpscontainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="outcomecard"><h1>You ${outcome}!</h1>
+        <ul><li>AI Choice: ${CPUChoice}</li>
+        <li>Your Choice: ${playerNameChoice}</li></ul>
+        <h2>Refresh to Play Again</h2><div>`
+    );
+  }
 }
 
 function cfGame(playerChoice) {
@@ -148,7 +161,7 @@ function cfGame(playerChoice) {
   clearGameCards();
   DOMSelectors.cfcontainer.insertAdjacentHTML(
     "beforeend",
-    `<div class="outcomecard"><h1 class="header">You ${outcome}!</h1>
+    `<div class="outcomecard"><h1>You ${outcome}!</h1>
     <ul><li>Flip Outcome: ${flip}</li>
     <li>AI Choice: ${CPUChoice}</li>
     <li>Your Choice: ${playerNameChoice}</li></ul>
@@ -177,5 +190,8 @@ DOMSelectors.rpscontainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("cardbtn")) {
     let playerChoice = event.target.getAttribute("data-id");
     rpsGame(playerChoice);
+  }
+  if (event.target.classList.contains("cfbtn")) {
+    headTailsGameCard();
   }
 });
