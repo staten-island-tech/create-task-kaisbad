@@ -65,7 +65,7 @@ function rpsGame() {
   for (let round = 1; round <= 3; round++) {
     let random = Math.floor(Math.random() * 4);
     let CPUChoice;
-    let outcome;
+    //let outcome;
     if (random === 0) {
       CPUChoice = "Bone";
     } else if (random === 1) {
